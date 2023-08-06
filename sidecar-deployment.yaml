@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: sidecar-namespace
+  name: sidecar-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sidecar-app
+  template:
+    metadata:
+      labels:
+        app: sidecar-app
+    spec:
+      containers:
+        - name: main-app
+          image: main-app
+          imagePullPolicy: "Never"
+          ports:
+            - name: main-app-port
+              containerPort: 8088
+          resources:
+            requests:
+              cpu: 200m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          env:
+            - name: SERVER_PORT
+              value: "8088"
+        - name: sidecar-app
+          image: sidecar-app
+          imagePullPolicy: "Never"
+          ports:
+            - name: sidecar-port
+              containerPort: 8090
+          resources:
+            requests:
+              cpu: 200m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          env:
+            - name: SERVER_PORT
+              value: "8090"
+            - name: ROUTING_URL
+              value: "http://localhost:8088"

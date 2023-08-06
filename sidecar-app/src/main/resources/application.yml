@@ -1,0 +1,6 @@
+server:
+  port: ${SERVER_PORT:8088}
+
+main:
+  application:
+    url: ${ROUTING_URL:http://localhost:8080}
