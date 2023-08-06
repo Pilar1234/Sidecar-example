@@ -43,14 +43,14 @@ Run following command
    `eval $(minikube docker-env)`
 
 4. **Simplify Executing kubectl Commands** Set up the namespace and apply the required configurations:
-   kubectl config set-context --current --namespace=sidecar-namespace
+`   kubectl config set-context --current --namespace=sidecar-namespace
    kubectl apply -f sidecar-deployment.yaml
    kubectl apply -f sidecar-service.yaml
-   kubectl apply -f sidecar-namespace.yaml
+   kubectl apply -f sidecar-namespace.yaml`
 
 5. **Expose the Service Outside of the Cluster Network**
-minikube service sidecar-service --url
+`minikube service sidecar-service --url`
 
 6. **Access the Application**. In your browser, you can access the application at the following URLs, replacing MINIKUBE_IP with the IP address provided by Minikube:
-http://MINIKUBE_IP:30010/sidecar
-http://MINIKUBE_IP:30005/sampleTest
+`http://MINIKUBE_IP:30010/sidecar
+http://MINIKUBE_IP:30005/sampleTest`
