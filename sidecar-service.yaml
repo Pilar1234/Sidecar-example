@@ -6,10 +6,6 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - name: main-app
-      port: 8088
-      targetPort: main-app-port
-      nodePort: 30005
     - name: sidecar-app
       port: 8090
       targetPort: sidecar-port

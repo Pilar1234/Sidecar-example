@@ -12,7 +12,6 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @Slf4j
 public class SidecarController {
-// TODO: investigate passing url variable via deployment.yml to the sidecar container. That will allow to make sidecar app reusable
 
   @Autowired
   private RestTemplate restTemplate;
