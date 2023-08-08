@@ -1,10 +1,10 @@
-package com.example.sidecarapp;
+package com.example.authorisationserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SidecarAppApplicationTests {
+class AuthorisationServerApplicationTests {
 
 	@Test
 	void contextLoads() {

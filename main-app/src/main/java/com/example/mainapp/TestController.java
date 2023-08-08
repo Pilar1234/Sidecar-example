@@ -12,7 +12,7 @@ public class TestController {
 
   @GetMapping("/sampleTest")
   public ResponseEntity<String> sample() {
-    return new ResponseEntity<>("Hello from sample controller!" ,HttpStatus.OK);
+    return new ResponseEntity<>("Hello from main application!" ,HttpStatus.OK);
   }
 }
 

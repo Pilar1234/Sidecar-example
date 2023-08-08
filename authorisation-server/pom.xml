@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>sidecar-app</artifactId>
+	<artifactId>authorisation-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sidecar-app</name>
 	<description>sidecar-app</description>

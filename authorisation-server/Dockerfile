@@ -8,7 +8,7 @@ RUN addgroup -g 2000 -S appgroup && adduser -u 1000 -S appuser -G appgroup
 
 WORKDIR /opt/application
 
-COPY target/sidecar-app*.jar app.jar
+COPY target/authorisation-server*.jar app.jar
 
 RUN chown -R 1000:2000 /opt/application
 
@@ -18,4 +18,4 @@ ENTRYPOINT ["java","-jar", "app.jar"]
 
 HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1
 
-EXPOSE 8088
+EXPOSE 8081

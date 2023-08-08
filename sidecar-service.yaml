@@ -6,9 +6,9 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - name: sidecar-app
-      port: 8090
-      targetPort: sidecar-port
+    - name: nginx-app
+      port: 9090
+      targetPort: nginx-port
       nodePort: 30010
   selector:
     app: sidecar-app

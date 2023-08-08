@@ -21,7 +21,7 @@
 
     <modules>
         <module>main-app</module>
-        <module>sidecar-app</module>
+        <module>authorisation-server</module>
     </modules>
 
     <dependencies>
